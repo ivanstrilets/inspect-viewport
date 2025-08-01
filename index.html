@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Размер вьюпорта</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin-top: 20vh;
+      }
+      .viewport-size {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Размер вьюпорта</h1>
+    <div class="viewport-size">
+      Ширина: <span id="width"></span>px<br />
+      Высота: <span id="height"></span>px
+    </div>
+
+    <script>
+      function updateViewportSize() {
+        document.getElementById("width").textContent = window.innerWidth;
+        document.getElementById("height").textContent = window.innerHeight;
+      }
+
+      // Обновить при загрузке
+      updateViewportSize();
+
+      // Обновлять при изменении размера окна
+      window.addEventListener("resize", updateViewportSize);
+    </script>
+  </body>
+</html>
